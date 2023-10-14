@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className='App flex justify-center items-center min-h-[100vh]'>
-      <Router>
+      <Router basename={'/login_react'}>
         <Routes>
           <Route path="/" element={<Login />}/>
         </Routes>
