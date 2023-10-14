@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-// import styles from "./Login.module.scss";
 
 const Login = () => {
-    const [usernameFocusedOrValid, setUsernameFocusedOrValid] = useState(false);
-    const [passwordFocusedOrValid, setPasswordFocusedOrValid] = useState(false);
-    const [emailFocusedOrValid, setEmailFocusedOrValid] = useState(false);
-    const [isActive, setIsActive] = useState(false)
-    const [animate, setAnimate] = useState(false);
+    const [usernameFocusedOrValid, setUsernameFocusedOrValid] = useState<boolean>(false);
+    const [passwordFocusedOrValid, setPasswordFocusedOrValid] = useState<boolean>(false);
+    const [emailFocusedOrValid, setEmailFocusedOrValid] = useState<boolean>(false);
+    const [isActive, setIsActive] = useState<boolean>(false)
+    const [animate, setAnimate] = useState<boolean>(false);
 
 
-    const handleUsernameFocus = () => {
+    const handleUsernameFocus = (): void => {
         setUsernameFocusedOrValid(true);
     };
 
@@ -17,7 +16,7 @@ const Login = () => {
         setUsernameFocusedOrValid(!!e.target.value);
     };
 
-    const handlePasswordFocus = () => {
+    const handlePasswordFocus = (): void => {
         setPasswordFocusedOrValid(true);
     };
 
@@ -25,11 +24,11 @@ const Login = () => {
         setPasswordFocusedOrValid(!!e.target.value);
     };
 
-    const handleEmailFocus = () => {
+    const handleEmailFocus = ():void => {
         setEmailFocusedOrValid(true);
     };
 
-    const handleEmailBlur = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleEmailBlur = (e: React.ChangeEvent<HTMLInputElement>): void => {
         setEmailFocusedOrValid(!!e.target.value);
     };
 
