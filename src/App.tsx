@@ -7,13 +7,13 @@ import Login from "./pages/Login/Login";
 function App() {
 
   return (
-    <div className='App flex justify-center items-center min-h-[100vh]'>
-      <Router basename={'/login_react'}>
-        <Routes>
-          <Route path="/" element={<Login />}/>
-        </Routes>
-      </Router>
-    </div>
+    <Router basename={'/login_react'}>
+        <div className='App flex justify-center items-center min-h-[100vh]'>
+          <Routes>
+            <Route path="/" element={<Login />}/>
+          </Routes>
+        </div>
+    </Router>
   )
 }
 
